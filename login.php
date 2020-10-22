@@ -26,4 +26,5 @@
 			echo '<script language="javascript">alert("username/password anda salah!"); document.location="index.php";</script>';
 		}
 	}
+	#cek
 ?>
