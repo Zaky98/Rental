@@ -1,6 +1,7 @@
 <?php
 require_once "koneksi.php";
 $aksi = $_GET['aksi'];
+session_start();
 
 $id = $_GET['id'];
 $sewa = $_GET['sewa'];
@@ -11,6 +12,7 @@ $deskripsi = $_POST['deskripsi'];
 $foto = $_FILES['gambar']['name'];
 $tmp = $_FILES['gambar']['tmp_name'];
 $path = "img/".$foto;
+$toko = $_SESSION['nama'];
 
 if ($aksi == 'Tambah') {
   if(move_uploaded_file($tmp, $path)){ 
